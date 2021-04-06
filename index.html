@@ -4,6 +4,7 @@
 <img src="https://github.com/dell22/te1/commit/93f3eedbb09605e0b0e805c09571d74764009a14" alt="" />
 
 <script  type="text/javascript">
+
 function getcal(){
 var s = document.getElementById("SPM").value;
 var w = document.getElementById("DW").value;
@@ -22,9 +23,10 @@ return c; }
 
 function prlcal(){
 var x = document.getElementById("POR").value;
- var y = getcal();
+var y = getcal();
 var z = (y / x) * 0.85;
-document.getElementById("prlcal").innerHTML = z;
+var n =Math.round(z)
+document.getElementById("prlcal").innerHTML = n;
 }
 
 function prhrs(){
@@ -51,15 +53,29 @@ document.getElementById("prhrs").innerHTML = p;}
 <h4> Input the Speed-Stroke per minute: <input type="number" id ="SPM" />
 <button type="button" onclick="getcal()"> CalParts </button> </h4>
 
-<p> <h4> The total production of parts per hour=  <span id="getcal"> </span> </h4> </p>
+<p> <h4> The total production of parts per hour=  <span style="color:blue;" id="getcal"> </span> </h4> </p>
 
 <h4> How many parts per each reel: <input type="number" id ="POR" />
 <button type="button" onclick="prlcal()"> CalReels </button> </h4>
-<p> <h4> The total reels per hour=  <span id="prlcal"> </span> </h4> </p>
+<p> <h4> The total reels per hour=  <span style="color:blue;" id="prlcal"> </span> </h4> </p>
 
 <h4> Input the hours of the shift 8 or 12: <input type="number" id ="PHR" />
 <button type="button" onclick="prhrs()"> CalParts per hours </button> </h4>
-<p> <h4> The total production of parts per  <span id ="PHR">  one shift= </span>  <span id="prhrs"> </span>  </h4> </p>
+<p> <h4> The total production of parts per one shift= <span style="color:blue;" id ="prhrs"> </span>   </h4> </p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p> <h4 style="color:blue;"> &copy; 2021 Programming: Ihab Albadri </h4> </p>
+
 
 
 
