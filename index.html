@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
- <head>
+<head>
   <title>TE Stamping</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ .btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  background-color: skyblue;
+  padding: 5px 15px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+/* Blue */
+.info {
+  border-color: #2196F3;
+  color: dodgerblue;
+  }
+ .info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+    </style>
 </head>
 <body>
 <img src="https://raw.githubusercontent.com/dell22/te1/main/TE_Logo.jpg" alt="" />
@@ -47,23 +70,24 @@ document.getElementById("prhrs").innerHTML = p;}
 
 </script>
 
- <p> <h2> TE Calculation the total product for the Press# <input type="number" size="3" maxlength="4"/> </h2> </p>
+ <p> <h2> TE Calculation the total product for the Press# <input type="number" min="1" max="200" size="2" /> </h2> </p>
 
-<p><h3>Is the press has one or two production part numbers A & B (High Speed):<input type="number" id ="DW" /> <button type="button" onclick="getcal()"> A=1 & B=2 </button> </h3></p>
+<p><h3>Is the press has one or two production lines (Frontside & Backside):
+       <input type="number" min="1" max="2" id ="DW" /> </h3></p>
 
 <p> <h3> What is the Speed of the machine?</h3> </p>
 
-<h4> Input the Speed-Stroke per minute: <input type="number" id ="SPM" />
-<button type="button" onclick="getcal()"> CalParts </button> </h4>
+<h4> Input the Speed-Stroke per minute: <input type="number" id ="SPM" min="1" max="2000" />
+<button  class="btn info" onclick="getcal()" style="color:red;"> Cal.Parts </button> </h4>
 
 <p> <h4> The total production of parts per hour=  <span style="color:blue;" id="getcal"> </span> </h4> </p>
 
-<h4> How many parts per each reel: <input type="number" id ="POR" />
-<button type="button" onclick="prlcal()"> CalReels </button> </h4>
+<h4> How many parts per each reel: <input type="number" id ="POR" min="1" max="100000" />
+<button class="btn info" onclick="prlcal()" style="color:red;"> Cal.Reels </button> </h4>
 <p> <h4> The total reels per hour=  <span style="color:blue;" id="prlcal"> </span> </h4> </p>
 
-<h4> Input the hours of the shift 8 or 12: <input type="number" id ="PHR" />
-<button type="button" onclick="prhrs()"> CalParts per hours </button> </h4>
+<h4> Input the hours of the shift 8 or 12: <input type="number" id ="PHR" min="1" max="24" />
+<button class="btn info" onclick="prhrs()" style="color:red;"> Cal.Parts per hours </button> </h4>
 <p> <h4> The total production of parts per one shift= <span style="color:blue;" id ="prhrs"> </span>   </h4> </p>
 
 <br>
@@ -80,7 +104,7 @@ document.getElementById("prhrs").innerHTML = p;}
 <br>
 <br>
 <br>
-<p> <h4 style="color:blue;"> &copy; 2021 Programming: Ihab Albadri </h4> </p>
+<marquee behavior="scroll" direction="right"><p> <h4 style="color:blue;"> &copy; 2021 Programming: Ihab Albadri </h4> </p> </marquee>
 
 </body>
 </html>
