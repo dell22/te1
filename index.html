@@ -4,6 +4,17 @@
   <title>TE Stamping</title>
   <meta name="viewport" content="width=device-width, initial-scale=.5">
 <style>
+ p.solid {
+     border-style: solid;
+     background-color: powderblue;
+     display: inline-block;
+     text-align: center; }
+
+    div.mainborder {
+  position: relative;
+  height: 800px;
+  border: 5px solid skyblue; }
+
  .btn {
   display: inline-block;
   text-align: center;
@@ -12,23 +23,21 @@
   padding: 5px 15px;
   font-size: 14px;
   outline: none;
-  cursor: pointer;
-}
+  cursor: pointer;}
+
 /* Blue */
 .info {
   border-color: #87CEFA;
-  color: lightskyblue;
-  }
+  color: lightskyblue; }
+
  .info:hover {
   background: #7FFFD4;
-  color: aquamarine;
-}
+  color: aquamarine; }
 
     </style>
 </head>
 
 <body>
-<img src="https://raw.githubusercontent.com/dell22/te1/main/TE_Logo.jpg" alt="" />
 
 <script  type="text/javascript">
 
@@ -70,7 +79,8 @@ document.getElementById("prhrs").innerHTML = p;}
 }
 
 </script>
-
+ <div class="mainborder">
+ <img src="https://raw.githubusercontent.com/dell22/te1/main/TE_Logo.jpg" alt="" />
  <p> <h2> TE Calculation the total product for the Press# <input type="number" min="1" max="200" size="5" /> </h2> </p>
 
 <p><h3>Is the press has one or two production lines (Frontside & Backside):
@@ -96,7 +106,7 @@ document.getElementById("prhrs").innerHTML = p;}
 <br>
 
 <marquee behavior="scroll" direction="right"><p> <h4 style="color:blue;"> &copy; 2021 Programming: Ihab Albadri </h4> </p> </marquee>
-
+</div>
 </body>
 </html>
 
